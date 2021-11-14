@@ -380,7 +380,7 @@ void A_WeaponReady (player_t *player, pspdef_t *psp)
 /* */
 /* bob the weapon based on movement speed */
 /* */
-	angle = (64*gamevbls)&(FINEANGLES-1);
+	angle = (128*ticon)&(FINEANGLES-1);
 	psp->sx = WEAPONX + (player->bob>>FRACBITS) * finecosine(angle);
 	angle &= FINEANGLES/2-1;
 	psp->sy = WEAPONTOP + (player->bob>>FRACBITS) * finesine(angle);
@@ -559,7 +559,7 @@ void A_Saw (player_t *player, pspdef_t *psp)
 		linetarget->x, linetarget->y);
 	if (angle - player->mo->angle > ANG180)
 	{
-		if (angle - player->mo->angle < -ANG90/20)
+		if ((int)(angle - player->mo->angle) < -ANG90/20)
 			player->mo->angle = angle + ANG90/21;
 		else
 			player->mo->angle -= ANG90/20;
@@ -830,7 +830,7 @@ void P_SetupPsprites (player_t *player)
 ================== 
 */ 
  
-int		ticremainder[2];
+VINT		ticremainder[2];
 
 void P_MovePsprites (player_t *player) 
 {

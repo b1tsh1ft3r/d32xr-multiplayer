@@ -71,10 +71,10 @@ static VINT cursordelay;
 static VINT	movecount;
 static VINT	playermap = 1;
 
-static playmode_t currentplaymode = single;
-static menu_t	cursorpos;
-static screen_t  screenpos;
-static skill_t	playerskill;
+static VINT currentplaymode = single;
+static VINT	cursorpos;
+static VINT screenpos;
+static VINT playerskill;
 
 static VINT saveslot;
 static VINT savecount;
@@ -383,7 +383,6 @@ int M_Ticker (void)
 			startmap = mapnumbers[playermap - 1]; /*set map number */
 			startskill = playerskill;	/* set skill level */
 			starttype = currentplaymode;	/* set play type */
-
 			return ga_startnew;		/* done with menu */
 		}
 
@@ -595,7 +594,7 @@ void M_Drawer (void)
 		M_MapName(mapnumber, mapname, sizeof(mapname));
 		mapnamelen = mystrlen(mapname);
 
-		item = &mainitem[mi_level];		
+		item = &mainitem[mi_level];
 
 		/* draw game mode information */
 #ifdef MARS
@@ -607,7 +606,6 @@ void M_Drawer (void)
 		EraseBlock(80, m_doom_height + 22, 320 - 80, 200 - m_doom_height + 22);
 		DrawJagobj(m_playmode[currentplaymode], 80, m_doom_height + 22);
 #endif
-
 
 #ifndef MARS
 		EraseBlock(80, m_doom_height + CURSORY(NUMMAINITEMS - 2) + 20 + 2, 320, nums[0]->height);

@@ -12,6 +12,7 @@ Looking directly at 2nd controller port of MegaDrive.
 
 ```
    SEGA 1                      SEGA 2
+ CTRL PORT 2                CTRL PORT 2
 -------------              -------------
 \ 5 4 3 2 1 /              \ 5 4 3 2 1 /
  \ 9 8 7 6 /                \ 9 8 7 6 /

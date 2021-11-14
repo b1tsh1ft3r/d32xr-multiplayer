@@ -23,9 +23,6 @@ Pin 9 = RX
 Pin 6 from one console must go to pin 9 on the other console and vice-versa. Ground will connect straight through from each console
 to each other. 
 
-The goal of the project is to have a code base from which a playable version of DOOM for the Sega 32X platform could be compiled.
-It is primarily focused on preservation and education but also on fixing the original game's idiosyncrasies and improving performance.
-
 ## Links
 https://github.com/viciious/d32xr
 

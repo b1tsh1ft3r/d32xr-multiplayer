@@ -9,11 +9,13 @@ The multiplayer mode in this version requires a custom made cable which requires
 on how to hook it up.
 
 Looking directly at 2nd controller port of MegaDrive.
+
+```
 -------------
 \ 5 4 3 2 1 /
  \ 9 8 7 6 /
   ---------
-
+```
 Pin 6 = TX
 Pin 8 = Ground
 Pin 9 = RX

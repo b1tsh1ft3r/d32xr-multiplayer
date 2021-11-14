@@ -6,9 +6,9 @@ The goal of this project was to add in system link play for Doom32X Resurrection
 for CO-OP or Deathmatch and uses the 2nd controller port on each console for networking ability.
 
 The multiplayer mode in this version requires a custom made cable which requires 3 wires. See the diagram below for information
-on how to hook it up.
+on how to hook it up. It only communicates at 4800 Baud 8-N-1 Which is the fastest the controller port can communicate at in serial mode.
 
-Looking directly at 2nd controller port of MegaDrive.
+Looking directly at 2nd controller port of each console.
 
 ```
    SEGA 1                      SEGA 2

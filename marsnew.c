@@ -903,7 +903,7 @@ unsigned I_NetTransfer (unsigned buttons)
 	outbytes[0] = buttons>>8;
 	outbytes[1] = buttons;
 	outbytes[2] = consistancy;
-	outbytes[3] = vblsinframe;
+	outbytes[3] = vblsinframe[consoleplayer];
 
 	if (consoleplayer) /* player 1 waits before sending */
 	{
@@ -913,7 +913,7 @@ unsigned I_NetTransfer (unsigned buttons)
 			inbytes[i] = val;
 			PutSerialChar(outbytes[i]);
 		}
-		vblsinframe = inbytes[3];		/* take vblsinframe from other player */
+		vblsinframe[0] = inbytes[3];		/* take vblsinframe from other player */
 	}
 	else /* player 0 sends first */
 	{
